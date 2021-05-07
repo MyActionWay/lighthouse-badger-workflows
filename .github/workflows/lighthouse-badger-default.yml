@@ -1,12 +1,12 @@
-# Lighthouse-Badger | GitHub Action Workflow
+# Lighthouse-Badger-Default | GitHub Action Workflow
 # 
-# Description: Generates, adds & updates manually/automatically Lighthouse badges & reports from one/multiple input URL(s) to a selected target repository
+# Description: Generates, adds & updates manually/automatically Lighthouse badges & reports from one/multiple input URL(s) to a selected target repository & branch
 # Author: Sitdisch
 # Source: https://github.com/myactionway/lighthouse-badger-workflows
 # License: MIT
 # Copyright (c) 2021 Sitdisch
 
-name: 'Lighthouse-Badger'
+name: 'Lighthouse-Badger-Default'
 
 ########################################################################
 # DEFINE YOUR TOKEN, INPUTS AND TRIGGERS IN THE FOLLOWING
@@ -94,8 +94,8 @@ on:
 
 # Jobs
 jobs:
-  lighthouse-badger:
-    runs-on: ubuntu-latest
+  lighthouse-badger-default:
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -106,7 +106,7 @@ jobs:
         with:
           repository: 'myactionway/lighthouse-badges'
           path: temp_lighthouse_badges_nested
-      - uses: myactionway/lighthouse-badger-action@v1.0
+      - uses: myactionway/lighthouse-badger-action@v1.1
         with:
           urls: ${{ github.event.inputs.urls || env.URLS }}
           badges-args: ${{ github.event.inputs.badges-args || env.BADGES-ARGS || env.DEFAULT-BADGES-ARGS }}
