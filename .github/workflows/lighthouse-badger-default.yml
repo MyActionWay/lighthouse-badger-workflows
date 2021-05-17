@@ -109,7 +109,7 @@ jobs:
         with:
           repository: 'myactionway/lighthouse-badges'
           path: temp_lighthouse_badges_nested
-      - uses: myactionway/lighthouse-badger-action@v2.0
+      - uses: myactionway/lighthouse-badger-action@v2.1
         with:
           urls: ${{ github.event.inputs.urls || env.URLS }}
           badges_args: ${{ github.event.inputs.badges_args || env.BADGES_ARGS || env.DEFAULT_BADGES_ARGS }}
