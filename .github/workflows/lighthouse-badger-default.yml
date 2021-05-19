@@ -87,7 +87,6 @@ on:
 # THAT'S IT; YOU DON'T HAVE TO DEFINE ANYTHING IN THE FOLLOWING
 ########################################################################
 
-# Jobs
 jobs:
   lighthouse-badger-default:
     runs-on: ubuntu-20.04
@@ -109,7 +108,7 @@ jobs:
         with:
           repository: 'myactionway/lighthouse-badges'
           path: temp_lighthouse_badges_nested
-      - uses: myactionway/lighthouse-badger-action@v2.1
+      - uses: myactionway/lighthouse-badger-action@v2.2
         with:
           urls: ${{ github.event.inputs.urls || env.URLS }}
           badges_args: ${{ github.event.inputs.badges_args || env.BADGES_ARGS || env.DEFAULT_BADGES_ARGS }}
@@ -119,3 +118,4 @@ jobs:
           user_name: ${{ github.event.inputs.user_name || env.USER_NAME || env.DEFAULT_USER_NAME }}
           user_email: ${{ github.event.inputs.user_email || env.USER_EMAIL || env.DEFAULT_USER_EMAIL }}
           commit_message: ${{ github.event.inputs.commit_message || env.COMMIT_MESSAGE || env.DEFAULT_COMMIT_MESSAGE }}
+          max_push_attempts: 5
