@@ -104,7 +104,7 @@ jobs:
       - uses: myactionway/lighthouse-badger-action@v2.2
         with:
           urls: ${{ matrix.URLS }}
-          badges_args: ${{ matrix.BADGES_ARGS || env.BADGES_ARGS }}
+          badges_args: ${{ matrix.BADGES_ARGS }}
           audit_type: ${{ matrix.AUDIT_TYPE || env.AUDIT_TYPE }}
           mobile_lighthouse_params: ${{ matrix.MOBILE_LIGHTHOUSE_PARAMS || env.MOBILE_LIGHTHOUSE_PARAMS }}
           desktop_lighthouse_params: ${{ matrix.DESKTOP_LIGHTHOUSE_PARAMS || env.DESKTOP_LIGHTHOUSE_PARAMS }}
