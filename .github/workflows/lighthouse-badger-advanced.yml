@@ -16,7 +16,7 @@ name: 'Lighthouse-Badger-Advanced'
 env:
   TOKEN_NAME: # target token name; insert only the name never the real value e.g. 'LIGHTHOUSE_BADGER_TOKEN'
   # To change predefined values, just override them
-  REPO_BRANCH: '${{ github.repository }} master' # target repository & branch (predefined: repo with this file and master branch)
+  REPO_BRANCH: '${{ github.repository }} main' # target repository & branch (predefined: repo with this file and main branch)
   USER_NAME: 'github-actions[bot]' # user who should commit
   USER_EMAIL: '41898282+github-actions[bot]@users.noreply.github.com'
   AUDIT_TYPE: 'both' # 'mobile', 'desktop', 'both' or 'both_p'

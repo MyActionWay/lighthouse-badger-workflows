@@ -17,7 +17,7 @@ env:
   URLS: # URL(s) to be checked e.g. 'https://github.com/sitdisch https://github.com/mythemeway'
   TOKEN_NAME: # target token name; insert only the name never the real value e.g. 'LIGHTHOUSE_BADGER_TOKEN'
   # If any of the following env is blank, a default value is used instead
-  REPO_BRANCH: # target repository & branch e.g. 'dummy/mytargetrepo master'
+  REPO_BRANCH: # target repository & branch e.g. 'dummy/mytargetrepo main'
   BADGES_ARGS: # badge-style '-b {flat,...}', preceding-label '-l "Lighthouse "', output-path '-o lighthouse_results/dummy', save-report '-r', single-badge '-s'
   AUDIT_TYPE: # 'mobile', 'desktop', 'both' or 'both_p' 
   MOBILE_LIGHTHOUSE_PARAMS: # Lighthouse parameters mobile audit
@@ -27,7 +27,7 @@ env:
   COMMIT_MESSAGE: # e.g. 'Lighthouse results added'
   # 
   # THAT'S IT; JUMP TO THE TRIGGERS;
-  DEFAULT_REPO_BRANCH: '${{ github.repository }} master' # repo with this file and master branch
+  DEFAULT_REPO_BRANCH: '${{ github.repository }} main' # repo with this file and main branch
   DEFAULT_BADGES_ARGS: '-b pagespeed -o lighthouse_results -r'
   DEFAULT_AUDIT_TYPE: 'both'
   DEFAULT_MOBILE_LIGHTHOUSE_PARAMS: '--throttling.cpuSlowdownMultiplier=2'
