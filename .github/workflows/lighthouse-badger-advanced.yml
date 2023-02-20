@@ -40,7 +40,7 @@ jobs:
   lighthouse-badger-advanced:
     name: ${{ matrix.NAME }}
     runs-on: ubuntu-22.04
-    timeout-minutes: 10
+    timeout-minutes: 8
     strategy:
       fail-fast: false
       matrix:

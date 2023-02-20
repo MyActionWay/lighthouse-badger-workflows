@@ -42,7 +42,7 @@ on:
 jobs:
   lighthouse-badger-easy:
     runs-on: ubuntu-22.04
-    timeout-minutes: 10
+    timeout-minutes: 8
     steps:
       - name: Preparatory Tasks
         run: |
